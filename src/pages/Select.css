@@ -1,0 +1,31 @@
+.bg-select {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto 0 auto;
+	padding-bottom: 130px;
+	background-image: url('../images/surfer-two.png');
+    background-repeat: no-repeat;
+	background-position-x: 60%;
+	background-position-y: 90px;
+	background-attachment: fixed;
+}
+
+.bg-select label {
+	display: block;
+	text-align: center;
+	margin-bottom: 65px;
+}
+
+.bg-select select {
+	display: block;
+	width: 338px;
+	height: 34px;
+	margin: 25px auto;
+	text-align: center;
+	 -webkit-appearance: none;
+	 -moz-appearance: none;
+}
+
+.bg-select button {
+	margin-top: 80px;
+}
