@@ -2,7 +2,7 @@ import React from 'react';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Navbar from './components/Navbar.js';
+
 import SharedLayout from './SharedLayout';
 import Home from './pages/Home.js';
 import About from './pages/About.js';
