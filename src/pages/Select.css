@@ -10,21 +10,74 @@
 	background-attachment: fixed;
 }
 
-.bg-select label {
-	display: block;
-	text-align: center;
-	margin-bottom: 65px;
+form {
+	width:340px;
+	margin: 0 auto;
 }
 
-.bg-select select {
-	display: block;
-	width: 338px;
-	height: 34px;
-	margin: 25px auto;
+
+.form-title {
 	text-align: center;
-	 -webkit-appearance: none;
-	 -moz-appearance: none;
+	display: block;
 }
+
+.label-height, .label-weight, .label-exp {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.height {
+	width: 340px;
+}
+
+.flex-item {
+	width: 160px;
+	height: 34px;
+	margin: 0 auto 25px auto;
+	padding-left: 3px;
+}
+
+.flex-item:nth-child(2) {
+  margin-left: 20px;
+}
+
+select {
+	color: #333;
+}
+
+input{
+	margin: 0;
+	padding:0 0 0 5px;
+	width: 332px;
+	height: 30px;
+	margin: 0 auto 25px auto;
+}
+
+input::placeholder {
+    color: #333;
+/*    padding: 5px;*/
+}
+
+.full-length {
+	display: block;
+	width: 340px;
+	height: 34px;
+	margin: 0 auto 25px auto;
+	padding-left: 5px;
+/*	text-align: center;*/
+/*	 -webkit-appearance: none;
+	 -moz-appearance: none;*/
+}
+
+input, select, button, a {
+	outline-color: #444;
+}
+
+
+
+
 
 .bg-select button {
 	margin-top: 80px;
