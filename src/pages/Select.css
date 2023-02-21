@@ -1,6 +1,6 @@
+
 .bg-select {
 	width: 100%;
-	max-width: 800px;
 	margin: 0 auto 0 auto;
 	padding-bottom: 130px;
 	background-image: url('../images/surfer-two.png');
@@ -10,11 +10,25 @@
 	background-attachment: fixed;
 }
 
+input, select {
+	-ms-box-sizing:content-box;
+	-moz-box-sizing:content-box;
+	-webkit-box-sizing:content-box; 
+	box-sizing:content-box;
+
+	/*-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;*/
+
+	border: solid 1px #333;	 
+}
+
+
+
 form {
 	width:340px;
 	margin: 0 auto;
 }
-
 
 .form-title {
 	text-align: center;
@@ -32,53 +46,141 @@ form {
 	width: 340px;
 }
 
+
 .flex-item {
 	width: 160px;
 	height: 34px;
 	margin: 0 auto 25px auto;
-	padding-left: 3px;
+	padding-left: 5px;
 }
 
+
 .flex-item:nth-child(2) {
-  margin-left: 20px;
+	margin-left: 6px;
+
+}
+
+.bg-select input{
+	margin: 0;
+	padding:0 0 0 0;
+	width: 333px;
+	height: 34px;
+	margin: 0 auto 25px auto;
+	border: 1px solid ;
+	padding-left: 5px;
+}
+
+input::placeholder {
+    color: #333;
 }
 
 select {
 	color: #333;
 }
 
-input{
-	margin: 0;
-	padding:0 0 0 5px;
-	width: 332px;
-	height: 30px;
-	margin: 0 auto 25px auto;
-}
-
-input::placeholder {
-    color: #333;
-/*    padding: 5px;*/
-}
-
 .full-length {
 	display: block;
-	width: 340px;
+	width: 333px;
 	height: 34px;
 	margin: 0 auto 25px auto;
 	padding-left: 5px;
-/*	text-align: center;*/
-/*	 -webkit-appearance: none;
-	 -moz-appearance: none;*/
 }
 
 input, select, button, a {
 	outline-color: #444;
+	outline-offset: ;
 }
-
-
-
-
 
 .bg-select button {
 	margin-top: 80px;
 }
+
+@media only screen and (max-width: 530px) {
+	input, select {
+		box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	}
+
+	form {
+		max-width: 100%;
+	}
+
+	.form-title {
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+
+	.label-height, .label-weight, .label-exp{
+		margin-left: 3%;
+	}
+
+	.bg-select input, .bg-select select {
+		padding-left: 2%;
+	}
+
+	.height {
+		width: 96%;
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+
+	.flex-item {
+		width: 48%;
+	}
+
+	.flex-item:nth-child(2) {
+		margin-left: 4%;
+	}
+
+	.bg-select input {
+		width: 96%;
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+
+	.bg-select input::placeholder {
+/*		padding-left: 5px;*/
+	}
+
+	.full-length {
+		width: 96%;
+		margin-right: 2%;
+		margin-left: 2%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
