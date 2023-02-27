@@ -2,6 +2,7 @@ import './Select.css';
 
 export default function Select() {
 	return(
+		console.log("hello");
 		<div className="bg-select">	
 
 			<main className="select-wrap">
