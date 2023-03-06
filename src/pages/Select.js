@@ -1,8 +1,16 @@
+import { useState } from 'react';
 import './Select.css';
 
 export default function Select() {
+	
+	const [weight, setWeight] =  useState('');
+
+	function handleSubmit(e) {
+		e.preventDefault();
+		setWeight('');
+	}
+
 	return(
-		console.log("hello");
 		<div className="bg-select">	
 
 			<main className="select-wrap">
@@ -43,7 +51,16 @@ export default function Select() {
 
 					<label className="label-weight">Weight</label>
 					
-					<input type="text" name="weight"  autoComplete="off" placeholder="Weight in kilograms" />
+					<input 
+						type="text" 
+						name="weight"  
+						autoComplete="off" 
+						placeholder="Weight in kilograms" 
+						onChange={function(event) {
+							const val = event.target.value;
+							setWeight(val);
+						}}
+					/>
 						
 
 
@@ -55,7 +72,7 @@ export default function Select() {
 						<option value="">Intermediate</option>
 						<option value="">Pro</option>
 					</select>
-					<button>Continue</button>
+					<button onClick={handleSubmit}>Continue</button>
 				</form>
 			
 			</main>
