@@ -28,7 +28,7 @@ export default function App() {
 		            <Route path='Select' element={<Select />} />
 		            
 		            <Route path='Surfboards' element={<Surfboards />}>
-		            	<Route path='Custom-board' element={<CustomBoard />} />
+		            	<Route path='/Custom-board' element={<CustomBoard />} />
 		            </Route>
 		            
 		            <Route path='Contact' element={<Contact />} />
