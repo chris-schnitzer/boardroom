@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './Select.css';
-
+import { NavLink } from 'react-router-dom';
 export default function Select() {
 	
 	const initialValues = { heightFeet: "", heightInches: "", weight: "", exp: "" };
@@ -132,11 +132,13 @@ export default function Select() {
 						</select>
 						<p className="error">{formErrors.exp}</p>
 					</div>
-					<button type="submit">Continue</button>
+						<NavLink to="custom-board" type="submit">
+							<button>Continue</button>
+						</NavLink>
 				</form>
 			
 			</main>
-			
 		</div>
+
 	)
 }
