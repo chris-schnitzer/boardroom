@@ -44,20 +44,24 @@ form {
 
 .height {
 	width: 340px;
+	overflow: hidden;
+}
+
+.feet-wrap, .inches-wrap {
+	width:156px;
+	float: left;
+}
+
+.inches-wrap {
+	margin-left: 21px;
 }
 
 
 .flex-item {
-	width: 160px;
+	width: 156px;
 	height: 34px;
-	margin: 0 auto 25px auto;
+	margin: 0 auto 0 auto;
 	padding-left: 5px;
-}
-
-
-.flex-item:nth-child(2) {
-	margin-left: 6px;
-
 }
 
 .bg-select input{
@@ -65,7 +69,7 @@ form {
 	padding:0 0 0 0;
 	width: 333px;
 	height: 34px;
-	margin: 0 auto 25px auto;
+	margin: 0 auto 0 auto;
 	border: 1px solid ;
 	padding-left: 5px;
 }
@@ -78,17 +82,24 @@ select {
 	color: #333;
 }
 
-.full-length {
+.full-width {
 	display: block;
 	width: 333px;
 	height: 34px;
-	margin: 0 auto 25px auto;
+	margin: 0 auto 0 auto;
 	padding-left: 5px;
 }
 
 input, select, button, a {
 	outline-color: #444;
 	outline-offset: ;
+}
+
+.error {
+	font-size: 15px;
+	text-align: left;
+	margin:10px 0 20px 0;
+	color: rgb(255, 70, 30);
 }
 
 .bg-select button {
@@ -126,8 +137,15 @@ input, select, button, a {
 		margin-right: 2%;
 	}
 
-	.flex-item {
+	.feet-wrap, .inches-wrap {
 		width: 48%;
+		margin-left: 1%;
+		margin-right: 1%;
+
+	} 
+
+	.flex-item {
+
 	}
 
 	.flex-item:nth-child(2) {
@@ -144,11 +162,16 @@ input, select, button, a {
 /*		padding-left: 5px;*/
 	}
 
-	.full-length {
+	.full-width {
 		width: 96%;
 		margin-right: 2%;
 		margin-left: 2%;
 	}
+
+	.weight p, .exp p {
+		margin-left: 5px;
+	}
+
 }
 
 
