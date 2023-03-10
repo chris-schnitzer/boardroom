@@ -25,19 +25,16 @@ export default function App() {
 				<Route path='/' element={<SharedLayout />} >
 					<Route index element={ <Home />}/>
 					<Route path='About' element={<About />} />
-		            <Route path='Select' element={<Select />} />
-		            
-		            <Route path='Surfboards' element={<Surfboards />}>
-		            	<Route path='/Custom-board' element={<CustomBoard />} />
-		            </Route>
-		            
+		            <Route path='Select' element={<Select />}/>
+		            <Route path="custom-board" element={<CustomBoard />}/>
+		            <Route path='Surfboards' element={<Surfboards />}/>     
 		            <Route path='Contact' element={<Contact />} />
 		            <Route path='*' element={ <Error />} />
 				</Route>
+
 			</Routes>
 			
 		</BrowserRouter>
-
 		</>
 	)
 }

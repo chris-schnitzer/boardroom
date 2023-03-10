@@ -1,17 +1,23 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Select.css';
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import CustomBoard from './CustomBoard.js';
+
+
 export default function Select() {
 	
+	let navigate = useNavigate();
+
 	const initialValues = { heightFeet: "", heightInches: "", weight: "", exp: "" };
 	const [formValues, setFormValues] = useState(initialValues);
 	const [formErrors, setFormErrors] = useState({});
 	const [isSubmitted, setIsSubmitted] = useState(false);
 
+
 	function handleSubmit(e) {
 		e.preventDefault();
 		setFormErrors(validate(formValues));
-		setIsSubmitted(true);
+		setIsSubmitted(true);		
 	}
 
 	function handleChange(e) {
@@ -19,6 +25,12 @@ export default function Select() {
 		setFormValues({ ...formValues, [name]: value });
 		console.log(formValues.heightInches);
 	}
+
+	useEffect(() => {
+		if(Object.keys(formErrors).length === 0 && isSubmitted) {
+			return(navigate("/custom-board", {state:formValues}));
+		}
+	})
 
 	function validate(values) {
 		const errors = {};
@@ -40,15 +52,8 @@ export default function Select() {
 	}
 
 	return(
+		
 		<div className="bg-select">
-			{/*if length equals 0 and is submitted */}
-			{Object.keys(formErrors).length === 0 && isSubmitted ? 
-			(<div className="msg-success">
-				<h2>
-					Your sled will be with you shortly
-				</h2>
-			</div>) : <></>}		
-
 			<main className="select-wrap">
 				<p className="form-title">Please enter your details to get your shred on</p>
 			
@@ -84,6 +89,7 @@ export default function Select() {
 								name="heightInches"
 							>
 								<option value="">Inches</option>
+								<option value="0">0</option>
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -132,13 +138,12 @@ export default function Select() {
 						</select>
 						<p className="error">{formErrors.exp}</p>
 					</div>
-						<NavLink to="custom-board" type="submit">
-							<button>Continue</button>
-						</NavLink>
+							<button type="submit">Continue</button>
 				</form>
 			
 			</main>
 		</div>
+		
 
 	)
 }
