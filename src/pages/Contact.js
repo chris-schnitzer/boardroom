@@ -1,5 +1,15 @@
+import contactBg from "../images/contact-bg.svg";
+
 export default function Contact() {
 	return(
-		<h1>Contact</h1>
+		<div className="contact-wrap">
+			<div className="contact-text">
+				<h1>Get in touch.</h1>
+				<p>Find me in the tube at:<br/>cdschnitzer@gmail.com</p>
+			</div>
+			<div className="contact-bg-img">
+				<img src={contactBg} alt="decorative wave"/>
+			</div>
+		</div>
 	)
 }

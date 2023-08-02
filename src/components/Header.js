@@ -1,11 +1,13 @@
 import React from 'react';
-
-import logo from '../images/boardroom-logo.png';
+import { NavLink } from 'react-router-dom';
+import logo from '../images/boardroom-logo.svg';
 
 export default function Header() {
 	return(
 		<header>
-			<img className="logo" src={logo} alt="The Board Room logo"/>
+			<NavLink to="/">
+				<img className="logo" src={logo} alt="The Board Room logo"/>
+			</NavLink>
 		</header>
 	)
 }

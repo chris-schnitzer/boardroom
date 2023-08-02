@@ -3,12 +3,16 @@ body{
 	color: #333;
 }
 
+p {
+	line-height: 23px;
+}
+
 header {
 	width: 100%;
 	position: fixed;
 	top: 0;
 	background-color: #fff;
-	z-index: 1;
+	z-index: 999;
 }
 
 .logo{
@@ -20,11 +24,7 @@ header {
 /*//Placeholder h1's */
 h1{
 	margin-top: 130px;
-	margin-left: 270px;
 }
-
-
-
 
 main {
  width: 100%;
@@ -58,14 +58,394 @@ button {
 	cursor: pointer;
 }
 
+/*About*/
+
+.about-wrap {
+ width: 100%;
+ max-width: 900px;
+ margin: 180px auto;
+ display: block;
+
+}
+
+.about-intro, .about-wrap h1 {
+	margin-right: auto;
+	margin-left: auto;
+	width: 55%;
+}
+
+
+
+.three-col-wrap {
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 70px;
+
+}
+
+.about-beginner, .about-intermediate, .about-pro {
+ overflow: hidden;
+ width: 800px;
+ margin-top: 30px;
+}
+
+.about-intermediate, .about-pro {
+	clear: both;
+}
+
+.beg-img, .int-img, .pro-img {
+	width: 300px;
+	float: left;
+}
+
+.about-intermediate p, .about-beginner p, .about-pro p {
+	width: 470px;
+	float: left;
+	margin-top: 50px;
+	margin-left: 30px;
+}
+
+.three-col-wrap .nav-link {
+	margin-left: 30px;
+	color: #000;
+}
+
+.three-col-wrap .nav-link:hover {
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+/*Contact*/
+.contact-wrap {
+	width: 100%;
+	height: auto;
+
+}
+
+.contact-text {
+	position: absolute;
+	bottom: 40%;
+	left: 35%;
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 15px;
+	z-index: 1;
+}
+
+.contact-text h1 {
+	margin-top: 0;
+}
+
+.contact-bg-img {
+	width: 80%;
+	max-width: 1000px;
+/*	background-color: greenyellow;*/
+	position: fixed;
+	right: 0;
+	bottom: 0;
+}
+
+.contact-bg-img img {
+	display: block;
+}
+
+
+
+
+
 /*custom board commponent*/
 .custom-wrap {
-/* background-color: greenyellow;*/
+	position: relative;
 }
-.custom-wrap h1 {
-	margin: 0;
+
+.custom-wrap h2 {
+	margin-top: 0;
+}
+
+.custom-wrap h4 {
+
+}
+
+.custom-wrap img {
+/*	width: 150px;*/
+height: 596px;
+	top: 0;
+	position: absolute;
+	z-index: -2;
+}
+
+.custom-wrap p {
+	text-align: left;
+}
+
+.board-img-text {
+	margin-bottom: 40px;
+	z-index: -3;
+}
+
+
+
+.board-text {
+	background-color: rgba(255, 255, 255, 0.8);
+	position: relative;
+	width: 66%;
+	margin: 20px auto 0 auto;
+	z-index: -1;
+	padding: 65px 15px 50px 15px;
+
+}
+
+.board-text p { 
+	margin-bottom: 0;
+}
+
+.note {
+	margin-top: 0;
+/*	margin-bottom: 30px;*/
+	font-size: 15px;
+}
+
+
+/*.spacer {
+	width: 100%;
+	height: 1px;
+	background-color: #000;*/
+
+
+
+.shop-now {
+	margin-top: 60px;
+	width: 155px;
+	height: 35px;
+	margin: 30px auto 0 auto;
+	display: block;
+	background-color: #0be65d;
+	border: none;
+	cursor: pointer;
+	text-decoration: none;
+	color: #000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.shop-now, .note {
+
+}
+
+
+
+
+
+
+
+
+
+/*surfboards*/
+.surfboards-wrap {
+	width: 90%;
+	max-width: 800px;
+	margin: 0 auto 180px auto;
+}
+
+
+.surfboards-intro {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.surfboards-wrap h1 {
+	margin-top: 180px;
 	
 }
+
+.ind-surfboard-wrap {
+	margin-top: 100px;
+}
+
+.ind-surfboard-wrap img {
+	width: 120px;
+	margin-top: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+}
+
+
+
+
+
+/*error 404*/
+.error-wrap {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	z-index: -10;
+	background-repeat: no-repeat;
+	background-image: url("./images/desktop-404.png");
+	background-size:contain;
+    background-position:bottom;
+
+}
+
+.error-msg {
+position: relative;
+ width: 300px;
+ margin: 0 auto 0 auto;
+}
+
+.error-msg h1 {
+	margin-top: 150px;
+	margin-left: 0;
+	font-size: 48px;
+}
+
+.error-msg h3 {
+	font-weight: 400;
+}
+
+@media only screen and (max-width:1320px) {
+	.three-col-wrap {
+		display: block;
+		
+	}
+
+	.about-beginner, .about-intermediate, .about-pro {
+		width: 80%;
+		max-width: 600px;
+		margin-right: auto;
+		margin-left: auto;
+		display: block;
+	}
+
+	.surfboards-wrap {
+		max-width: 600px;
+	}
+
+	.about-intermediate, .about-pro {
+		
+	}
+
+	.beg-img, .int-img, .pro-img {
+		margin: 0 auto;
+		float: none;
+		display: block;
+	}
+
+	.about-intermediate p, .about-beginner p, .about-pro p {
+		width: 100%;
+		float: none;
+		margin-left: 0;
+	}
+
+	.three-col-wrap .nav-link {
+		margin-left: 0;
+	}
+
+	.about-intermediate, .about-pro {
+		clear: none;
+	}
+
+}
+
+@media only screen and (max-width:1090px) {
+
+	.about-beginner, .about-intermediate, .about-pro {
+		max-width: 500px;
+	}
+
+	.surfboards-wrap {
+		max-width: 480px;
+	}
+
+	
+	.contact-text {
+		bottom: 30%;
+	}
+}
+
+@media only screen and (max-width: 860px) {
+	.logo{
+	width: 60px;
+	display: block;
+	margin: 15px auto;
+	}
+
+	main, .about-wrap {
+		margin-top: 135px;
+	}
+
+	main.custom-wrap {
+		margin-top: 90px;
+	}
+
+	.error-wrap {
+		background-image: url("./images/mobile-404.png");
+		background-size:contain;
+	}
+
+	.error-msg {
+		line-height: 16px;
+	}
+
+	.error-msg h1 {
+		margin-top: 120px;
+		font-size: 32px;
+	}
+
+	.contact-text {
+		left: 10%;
+		bottom: 40%;
+	}
+
+	.about-intro, .about-wrap h1 {
+		margin-right: auto;
+		margin-left: auto;
+		width: 65%;
+	}
+
+	.about-beginner, .about-intermediate, .about-pro {
+		max-width: 700px;
+	}
+}
+
+
+
+
+@media screen and (max-width: 530px) {
+	.note {
+		padding: 0 15px;
+	}
+	.about-wrap {
+		width: 90%;
+	}
+
+	.about-intro, .about-wrap h1 {
+		width: 90%;
+	}
+
+	.about-beginner, .about-intermediate, .about-pro {
+		width: 90%;
+	}
+
+	
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
