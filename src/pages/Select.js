@@ -27,6 +27,7 @@ export default function Select() {
 	}
 
 	useEffect(() => {
+		window.scrollTo(0,0);
 		if(Object.keys(formErrors).length === 0 && isSubmitted) {
 			return(navigate("/custom-board", {state:formValues}));
 		}

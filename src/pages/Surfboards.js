@@ -1,8 +1,15 @@
+import { useEffect } from 'react';
+
 import softTopImg from "../images/soft-top.svg";
 import midLengthImg from "../images/mid-length.svg";
-import shortboardImg from "../images/shortboard.svg";
+import shortboardImg from "../images/hpboard.svg";
 
 export default function Surfboards() {
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	return(
 		<div className="surfboards-wrap">
 

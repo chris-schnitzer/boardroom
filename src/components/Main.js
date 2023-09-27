@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-import mainImg from '../images/boards-fill.svg';
+import mainImg from '../images/home-boards.svg';
 
 export default function Main() {
 	return(

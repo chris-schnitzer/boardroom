@@ -1,9 +1,15 @@
 import { NavLink } from 'react-router-dom';
+import { useEffect } from 'react';
+
 import begImg from '../images/about-beginner.svg';
 import intImg from '../images/about-intermediate.svg';
 import proImg from '../images/about-pro.svg';
 
 export default function About() {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	return(
 		<div className="about-wrap">
 

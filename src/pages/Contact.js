@@ -1,6 +1,12 @@
+import { useEffect } from 'react';
+
 import contactBg from "../images/contact-bg.svg";
 
 export default function Contact() {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	return(
 		<div className="contact-wrap">
 			<div className="contact-text">

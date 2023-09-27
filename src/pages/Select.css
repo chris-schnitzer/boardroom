@@ -20,7 +20,13 @@ input, select {
 	-moz-appearance:none;
 	appearance:none;*/
 
-	border: solid 1px #333;	 
+	border: solid 1px #333;
+	border-radius: 0;
+	background-color: #fff;	 
+}
+
+input:focus, select:focus {
+
 }
 
 
@@ -104,6 +110,8 @@ input, select, button, a {
 
 .bg-select button {
 	margin-top: 80px;
+	color: #000;
+	font-weight: normal;
 }
 
 @media only screen and (max-width: 530px) {

@@ -2,7 +2,6 @@ import React from 'react';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-
 import SharedLayout from './SharedLayout';
 import Home from './pages/Home.js';
 import About from './pages/About.js';
@@ -21,9 +20,9 @@ export default function App() {
 		<>
 		
 		<BrowserRouter>
-			<Header />
+			<Header/>
 			<Routes>
-				<Route path='/' element={<SharedLayout />} >
+				<Route path='/' element={<SharedLayout />} >	
 					<Route index element={ <Home />}/>
 					<Route path='About' element={<About />} />
 		            <Route path='Select' element={<Select />}/>

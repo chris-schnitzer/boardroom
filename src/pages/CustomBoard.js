@@ -1,4 +1,4 @@
-
+import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import softTopImg from '../images/soft-top.svg';
@@ -10,6 +10,9 @@ export default function CustomBoard() {
 	
 	const { state } = useLocation();
 
+	useEffect(() => {
+ 		window.scrollTo(0, 0);
+ 	}, []);
 
 	// init values
 	let feet = parseInt(state.heightFeet);
@@ -90,6 +93,8 @@ export default function CustomBoard() {
 	}
 
  	let url = `//www.google.com/search?q=surfboard%20+%20+${typeOfBoard + ` ` + feet +`"`+inches}&tbm=shop`;
+
+
 
 	return (
 		<>  
