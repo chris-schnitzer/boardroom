@@ -1,6 +1,6 @@
 .nav-menu-btn {
 	position: fixed;
-	z-index: 999;
+	z-index: 99999;
 	top: 5px;
 	left: 25px;
 	cursor: pointer;
@@ -15,7 +15,12 @@
 nav {
 	position: fixed;
 	top: 120px;
+	z-index: 9999;
 	
+}
+
+.nav-logo {
+	display: none;
 }
 
 .nav-wrapper {
@@ -46,13 +51,20 @@ nav a:hover {
 	font-weight: bold;
 }
 
-@media only screen and (max-height: 860px) {
 
-}
 
 @media only screen and (max-width: 860px) {
 	.nav-menu-btn {
 		display: initial;
+	}
+
+	.nav-links-active .nav-logo {
+		display: block;
+		position: fixed;
+		top: 17px;
+		width: 60px;
+		left: 50%;
+		transform: translatex(-50%);
 	}
 
 	nav {
@@ -69,7 +81,7 @@ nav a:hover {
 		left: 0;
 		background-color: #fff;
 		height: 100vh;
-		z-index: 99;
+		z-index: 9999;
 	}
 
 	.nav-wrapper {
